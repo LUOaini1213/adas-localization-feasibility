@@ -1,0 +1,226 @@
+﻿编号,方案,工况,需求 m,满足,余量 m,覆盖的模态,冗余模态数,允许总时延 s,覆盖的传感器
+AEB-1,1V1R,晴天,52.3,True,147.7,camera+radar,2,9.41,前向雷达、前视摄像头
+AEB-1,1V1R,暴雨 50 mm/h,52.3,True,93.7,camera+radar,2,6.17,前向雷达、前视摄像头
+AEB-1,1V1R,暴雨 50 mm/h + 水膜 3 dB,52.3,True,75.4,camera+radar,2,5.08,前向雷达、前视摄像头
+AEB-1,5R1V,晴天,52.3,True,147.7,camera+radar,2,9.41,前向雷达、前视摄像头
+AEB-1,5R1V,暴雨 50 mm/h,52.3,True,93.7,camera+radar,2,6.17,前向雷达、前视摄像头
+AEB-1,5R1V,暴雨 50 mm/h + 水膜 3 dB,52.3,True,75.4,camera+radar,2,5.08,前向雷达、前视摄像头
+AEB-1,11V5R1L,晴天,52.3,True,195.8,camera+lidar+radar,3,12.3,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-1,11V5R1L,暴雨 50 mm/h,52.3,True,112.5,camera+lidar+radar,3,7.3,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-1,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,52.3,True,112.5,camera+lidar+radar,3,7.3,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-2,1V1R,晴天,25.7,True,174.3,camera+radar,2,13.1,前向雷达、前视摄像头
+AEB-2,1V1R,暴雨 50 mm/h,28.9,True,117.0,camera+radar,2,8.97,前向雷达、前视摄像头
+AEB-2,1V1R,暴雨 50 mm/h + 水膜 3 dB,28.9,True,98.8,camera+radar,2,7.66,前向雷达、前视摄像头
+AEB-2,5R1V,晴天,25.7,True,174.3,camera+radar,2,13.1,前向雷达、前视摄像头、右前角雷达、左前角雷达
+AEB-2,5R1V,暴雨 50 mm/h,28.9,True,117.0,camera+radar,2,8.97,前向雷达、前视摄像头、右前角雷达、左前角雷达
+AEB-2,5R1V,暴雨 50 mm/h + 水膜 3 dB,28.9,True,98.8,camera+radar,2,7.66,前向雷达、前视摄像头、右前角雷达、左前角雷达
+AEB-2,11V5R1L,晴天,25.7,True,222.4,camera+lidar+radar,3,16.56,前向雷达、前视主摄、前视长焦、右前角雷达、左前角雷达、激光雷达
+AEB-2,11V5R1L,暴雨 50 mm/h,28.9,True,135.8,camera+lidar+radar,3,10.33,前向雷达、前视主摄、前视长焦、右前角雷达、左前角雷达、激光雷达
+AEB-2,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,28.9,True,135.8,camera+lidar+radar,3,10.33,前向雷达、前视主摄、前视长焦、右前角雷达、左前角雷达、激光雷达
+AEB-3,1V1R,晴天,73.2,True,126.8,camera+radar,2,6.26,前向雷达、前视摄像头
+AEB-3,1V1R,暴雨 50 mm/h,81.4,True,64.6,camera+radar,2,3.45,前向雷达、前视摄像头
+AEB-3,1V1R,暴雨 50 mm/h + 水膜 3 dB,81.4,True,46.3,camera+radar,2,2.63,前向雷达、前视摄像头
+AEB-3,5R1V,晴天,73.2,True,126.8,camera+radar,2,6.26,前向雷达、前视摄像头
+AEB-3,5R1V,暴雨 50 mm/h,81.4,True,64.6,camera+radar,2,3.45,前向雷达、前视摄像头
+AEB-3,5R1V,暴雨 50 mm/h + 水膜 3 dB,81.4,True,46.3,camera+radar,2,2.63,前向雷达、前视摄像头
+AEB-3,11V5R1L,晴天,73.2,True,174.9,camera+lidar+radar,3,8.42,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-3,11V5R1L,暴雨 50 mm/h,81.4,True,83.4,camera+lidar+radar,3,4.3,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-3,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,81.4,True,83.4,camera+lidar+radar,3,4.3,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-4,1V1R,晴天,47.6,True,152.4,camera+radar,2,9.69,前向雷达、前视摄像头
+AEB-4,1V1R,暴雨 50 mm/h,52.3,True,93.7,camera+radar,2,6.17,前向雷达、前视摄像头
+AEB-4,1V1R,暴雨 50 mm/h + 水膜 3 dB,52.3,True,75.4,camera+radar,2,5.08,前向雷达、前视摄像头
+AEB-4,5R1V,晴天,47.6,True,152.4,camera+radar,2,9.69,前向雷达、前视摄像头
+AEB-4,5R1V,暴雨 50 mm/h,52.3,True,93.7,camera+radar,2,6.17,前向雷达、前视摄像头
+AEB-4,5R1V,暴雨 50 mm/h + 水膜 3 dB,52.3,True,75.4,camera+radar,2,5.08,前向雷达、前视摄像头
+AEB-4,11V5R1L,晴天,47.6,True,200.5,camera+lidar+radar,3,12.58,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-4,11V5R1L,暴雨 50 mm/h,52.3,True,112.5,camera+lidar+radar,3,7.3,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-4,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,52.3,True,112.5,camera+lidar+radar,3,7.3,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-5,1V1R,晴天,81.4,True,118.6,camera+radar,2,6.26,前向雷达、前视摄像头
+AEB-5,1V1R,暴雨 50 mm/h,81.4,True,64.6,camera+radar,2,3.45,前向雷达、前视摄像头
+AEB-5,1V1R,暴雨 50 mm/h + 水膜 3 dB,81.4,True,46.3,camera+radar,2,2.63,前向雷达、前视摄像头
+AEB-5,5R1V,晴天,81.4,True,118.6,camera+radar,2,6.26,前向雷达、前视摄像头
+AEB-5,5R1V,暴雨 50 mm/h,81.4,True,64.6,camera+radar,2,3.45,前向雷达、前视摄像头
+AEB-5,5R1V,暴雨 50 mm/h + 水膜 3 dB,81.4,True,46.3,camera+radar,2,2.63,前向雷达、前视摄像头
+AEB-5,11V5R1L,晴天,81.4,True,166.7,camera+lidar+radar,3,8.42,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-5,11V5R1L,暴雨 50 mm/h,81.4,True,83.4,camera+lidar+radar,3,4.3,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-5,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,81.4,True,83.4,camera+lidar+radar,3,4.3,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-6,1V1R,晴天,47.6,True,92.3,camera+radar,2,6.09,前向雷达、前视摄像头
+AEB-6,1V1R,暴雨 50 mm/h,52.3,True,58.0,camera+radar,2,4.03,前向雷达、前视摄像头
+AEB-6,1V1R,暴雨 50 mm/h + 水膜 3 dB,52.3,True,43.5,camera+radar,2,3.16,前向雷达、前视摄像头
+AEB-6,5R1V,晴天,47.6,True,92.3,camera+radar,2,6.09,前向雷达、前视摄像头
+AEB-6,5R1V,暴雨 50 mm/h,52.3,True,58.0,camera+radar,2,4.03,前向雷达、前视摄像头
+AEB-6,5R1V,暴雨 50 mm/h + 水膜 3 dB,52.3,True,43.5,camera+radar,2,3.16,前向雷达、前视摄像头
+AEB-6,11V5R1L,晴天,47.6,True,150.4,camera+lidar+radar,3,9.58,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-6,11V5R1L,暴雨 50 mm/h,52.3,True,82.0,camera+lidar+radar,3,5.47,前向雷达、前视主摄、前视长焦、激光雷达
+AEB-6,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,52.3,True,82.0,camera+lidar+radar,3,5.47,前向雷达、前视主摄、前视长焦、激光雷达
+ACC-1,1V1R,晴天,95.2,True,104.8,camera+radar,2,,前向雷达、前视摄像头
+ACC-1,1V1R,暴雨 50 mm/h,95.2,True,50.8,camera+radar,2,,前向雷达、前视摄像头
+ACC-1,1V1R,暴雨 50 mm/h + 水膜 3 dB,95.2,True,32.5,camera+radar,2,,前向雷达、前视摄像头
+ACC-1,5R1V,晴天,95.2,True,104.8,camera+radar,2,,前向雷达、前视摄像头
+ACC-1,5R1V,暴雨 50 mm/h,95.2,True,50.8,camera+radar,2,,前向雷达、前视摄像头
+ACC-1,5R1V,暴雨 50 mm/h + 水膜 3 dB,95.2,True,32.5,camera+radar,2,,前向雷达、前视摄像头
+ACC-1,11V5R1L,晴天,95.2,True,152.9,camera+lidar+radar,3,,前向雷达、前视主摄、前视长焦、激光雷达
+ACC-1,11V5R1L,暴雨 50 mm/h,95.2,True,69.6,camera+lidar+radar,3,,前向雷达、前视主摄、前视长焦、激光雷达
+ACC-1,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,95.2,True,69.6,camera+lidar+radar,3,,前向雷达、前视主摄、前视长焦、激光雷达
+ACC-2,1V1R,晴天,69.5,True,130.5,camera+radar,2,,前向雷达、前视摄像头
+ACC-2,1V1R,暴雨 50 mm/h,69.5,True,76.4,camera+radar,2,,前向雷达、前视摄像头
+ACC-2,1V1R,暴雨 50 mm/h + 水膜 3 dB,69.5,True,58.2,camera+radar,2,,前向雷达、前视摄像头
+ACC-2,5R1V,晴天,69.5,True,130.5,camera+radar,2,,前向雷达、前视摄像头
+ACC-2,5R1V,暴雨 50 mm/h,69.5,True,76.4,camera+radar,2,,前向雷达、前视摄像头
+ACC-2,5R1V,暴雨 50 mm/h + 水膜 3 dB,69.5,True,58.2,camera+radar,2,,前向雷达、前视摄像头
+ACC-2,11V5R1L,晴天,69.5,True,178.6,camera+lidar+radar,3,,前向雷达、前视主摄、前视长焦、激光雷达
+ACC-2,11V5R1L,暴雨 50 mm/h,69.5,True,95.2,camera+lidar+radar,3,,前向雷达、前视主摄、前视长焦、激光雷达
+ACC-2,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,69.5,True,95.2,camera+lidar+radar,3,,前向雷达、前视主摄、前视长焦、激光雷达
+ACC-3,1V1R,晴天,114.0,True,86.0,camera+radar,2,,前向雷达、前视摄像头
+ACC-3,1V1R,暴雨 50 mm/h,114.0,True,31.9,radar,1,,前向雷达
+ACC-3,1V1R,暴雨 50 mm/h + 水膜 3 dB,114.0,True,13.7,radar,1,,前向雷达
+ACC-3,5R1V,晴天,114.0,True,86.0,camera+radar,2,,前向雷达、前视摄像头
+ACC-3,5R1V,暴雨 50 mm/h,114.0,True,31.9,radar,1,,前向雷达
+ACC-3,5R1V,暴雨 50 mm/h + 水膜 3 dB,114.0,True,13.7,radar,1,,前向雷达
+ACC-3,11V5R1L,晴天,114.0,True,134.1,camera+lidar+radar,3,,前向雷达、前视主摄、前视长焦、激光雷达
+ACC-3,11V5R1L,暴雨 50 mm/h,114.0,True,50.8,camera+lidar+radar,3,,前向雷达、前视长焦、激光雷达
+ACC-3,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,114.0,True,50.8,camera+lidar+radar,3,,前向雷达、前视长焦、激光雷达
+ACC-4,1V1R,晴天,349.1,False,-149.1,,0,,
+ACC-4,1V1R,暴雨 50 mm/h,349.1,False,-203.1,,0,,
+ACC-4,1V1R,暴雨 50 mm/h + 水膜 3 dB,349.1,False,-221.3,,0,,
+ACC-4,5R1V,晴天,349.1,False,-149.1,,0,,
+ACC-4,5R1V,暴雨 50 mm/h,349.1,False,-203.1,,0,,
+ACC-4,5R1V,暴雨 50 mm/h + 水膜 3 dB,349.1,False,-221.3,,0,,
+ACC-4,11V5R1L,晴天,349.1,False,-101.0,,0,,
+ACC-4,11V5R1L,暴雨 50 mm/h,349.1,False,-184.3,,0,,
+ACC-4,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,349.1,False,-184.3,,0,,
+ACC-5,1V1R,晴天,209.3,False,-9.3,,0,,
+ACC-5,1V1R,暴雨 50 mm/h,209.3,False,-63.4,,0,,
+ACC-5,1V1R,暴雨 50 mm/h + 水膜 3 dB,209.3,False,-81.6,,0,,
+ACC-5,5R1V,晴天,209.3,False,-9.3,,0,,
+ACC-5,5R1V,暴雨 50 mm/h,209.3,False,-63.4,,0,,
+ACC-5,5R1V,暴雨 50 mm/h + 水膜 3 dB,209.3,False,-81.6,,0,,
+ACC-5,11V5R1L,晴天,209.3,True,38.8,camera,1,,前视长焦
+ACC-5,11V5R1L,暴雨 50 mm/h,209.3,False,-44.6,,0,,
+ACC-5,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,209.3,False,-44.6,,0,,
+LC-1,1V1R,晴天,59.9,False,nan,,0,,
+LC-1,1V1R,暴雨 50 mm/h,59.9,False,nan,,0,,
+LC-1,1V1R,暴雨 50 mm/h + 水膜 3 dB,59.9,False,nan,,0,,
+LC-1,5R1V,晴天,59.9,True,20.0,radar,1,,右后角雷达、左后角雷达
+LC-1,5R1V,暴雨 50 mm/h,59.9,True,8.9,radar,1,,右后角雷达、左后角雷达
+LC-1,5R1V,暴雨 50 mm/h + 水膜 3 dB,59.9,False,-0.8,,0,,
+LC-1,11V5R1L,晴天,59.9,True,20.0,camera+radar,2,,右侧后、右后角雷达、后视、左侧后、左后角雷达
+LC-1,11V5R1L,暴雨 50 mm/h,59.9,True,8.9,radar,1,,右后角雷达、左后角雷达
+LC-1,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,59.9,False,-0.8,,0,,
+LC-2,1V1R,晴天,73.8,False,nan,,0,,
+LC-2,1V1R,暴雨 50 mm/h,73.8,False,nan,,0,,
+LC-2,1V1R,暴雨 50 mm/h + 水膜 3 dB,73.8,False,nan,,0,,
+LC-2,5R1V,晴天,73.8,True,6.1,radar,1,,右后角雷达、左后角雷达
+LC-2,5R1V,暴雨 50 mm/h,73.8,False,-4.9,,0,,
+LC-2,5R1V,暴雨 50 mm/h + 水膜 3 dB,73.8,False,-14.6,,0,,
+LC-2,11V5R1L,晴天,73.8,True,6.1,camera+radar,2,,右侧后、右后角雷达、后视、左侧后、左后角雷达
+LC-2,11V5R1L,暴雨 50 mm/h,73.8,False,-4.9,,0,,
+LC-2,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,73.8,False,-14.6,,0,,
+LC-3,1V1R,晴天,42.7,False,nan,,0,,
+LC-3,1V1R,暴雨 50 mm/h,42.7,False,nan,,0,,
+LC-3,1V1R,暴雨 50 mm/h + 水膜 3 dB,42.7,False,nan,,0,,
+LC-3,5R1V,晴天,42.7,True,37.2,radar,1,,右后角雷达、左后角雷达
+LC-3,5R1V,暴雨 50 mm/h,42.7,True,26.2,radar,1,,右后角雷达、左后角雷达
+LC-3,5R1V,暴雨 50 mm/h + 水膜 3 dB,42.7,True,16.5,radar,1,,右后角雷达、左后角雷达
+LC-3,11V5R1L,晴天,42.7,True,37.2,camera+radar,2,,右侧后、右后角雷达、后视、左侧后、左后角雷达
+LC-3,11V5R1L,暴雨 50 mm/h,42.7,True,26.2,camera+radar,2,,右侧后、右后角雷达、后视、左侧后、左后角雷达
+LC-3,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,42.7,True,16.5,camera+radar,2,,右侧后、右后角雷达、后视、左侧后、左后角雷达
+LC-4,1V1R,晴天,51.9,False,nan,,0,,
+LC-4,1V1R,暴雨 50 mm/h,51.9,False,nan,,0,,
+LC-4,1V1R,暴雨 50 mm/h + 水膜 3 dB,51.9,False,nan,,0,,
+LC-4,5R1V,晴天,51.9,True,28.0,radar,1,,右后角雷达、左后角雷达
+LC-4,5R1V,暴雨 50 mm/h,51.9,True,17.0,radar,1,,右后角雷达、左后角雷达
+LC-4,5R1V,暴雨 50 mm/h + 水膜 3 dB,51.9,True,7.3,radar,1,,右后角雷达、左后角雷达
+LC-4,11V5R1L,晴天,51.9,True,28.0,camera+radar,2,,右侧后、右后角雷达、后视、左侧后、左后角雷达
+LC-4,11V5R1L,暴雨 50 mm/h,51.9,True,17.0,camera+radar,2,,右后角雷达、后视、左后角雷达
+LC-4,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,51.9,True,7.3,camera+radar,2,,右后角雷达、后视、左后角雷达
+LC-5,1V1R,晴天,39.6,False,nan,,0,,
+LC-5,1V1R,暴雨 50 mm/h,39.6,False,nan,,0,,
+LC-5,1V1R,暴雨 50 mm/h + 水膜 3 dB,39.6,False,nan,,0,,
+LC-5,5R1V,晴天,39.6,True,40.3,radar,1,,右后角雷达、左后角雷达
+LC-5,5R1V,暴雨 50 mm/h,39.6,True,29.3,radar,1,,右后角雷达、左后角雷达
+LC-5,5R1V,暴雨 50 mm/h + 水膜 3 dB,39.6,True,19.6,radar,1,,右后角雷达、左后角雷达
+LC-5,11V5R1L,晴天,39.6,True,40.3,camera+radar,2,,右侧后、右后角雷达、后视、左侧后、左后角雷达
+LC-5,11V5R1L,暴雨 50 mm/h,39.6,True,29.3,camera+radar,2,,右侧后、右后角雷达、后视、左侧后、左后角雷达
+LC-5,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,39.6,True,19.6,camera+radar,2,,右侧后、右后角雷达、后视、左侧后、左后角雷达
+LC-6,1V1R,晴天,23.2,False,nan,,0,,
+LC-6,1V1R,暴雨 50 mm/h,23.2,False,nan,,0,,
+LC-6,1V1R,暴雨 50 mm/h + 水膜 3 dB,23.2,False,nan,,0,,
+LC-6,5R1V,晴天,23.2,True,32.7,radar,1,,右后角雷达、左后角雷达
+LC-6,5R1V,暴雨 50 mm/h,23.2,True,27.0,radar,1,,右后角雷达、左后角雷达
+LC-6,5R1V,暴雨 50 mm/h + 水膜 3 dB,23.2,True,19.7,radar,1,,右后角雷达、左后角雷达
+LC-6,11V5R1L,晴天,23.2,True,40.7,camera+radar,2,,右侧后、右后角雷达、后视、左侧后、左后角雷达
+LC-6,11V5R1L,暴雨 50 mm/h,23.2,True,27.0,camera+radar,2,,右侧后、右后角雷达、后视、左侧后、左后角雷达
+LC-6,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,23.2,True,19.7,camera+radar,2,,右侧后、右后角雷达、后视、左侧后、左后角雷达
+CUT-1,1V1R,晴天,14.1,True,134.0,camera+radar,2,,前向雷达、前视摄像头
+CUT-1,1V1R,暴雨 50 mm/h,14.1,True,84.0,camera+radar,2,,前向雷达、前视摄像头
+CUT-1,1V1R,暴雨 50 mm/h + 水膜 3 dB,14.1,True,84.0,camera+radar,2,,前向雷达、前视摄像头
+CUT-1,5R1V,晴天,14.1,True,134.0,camera+radar,2,,前向雷达、前视摄像头、右前角雷达、左前角雷达
+CUT-1,5R1V,暴雨 50 mm/h,14.1,True,84.0,camera+radar,2,,前向雷达、前视摄像头、右前角雷达、左前角雷达
+CUT-1,5R1V,暴雨 50 mm/h + 水膜 3 dB,14.1,True,84.0,camera+radar,2,,前向雷达、前视摄像头、右前角雷达、左前角雷达
+CUT-1,11V5R1L,晴天,14.1,True,234.0,camera+lidar+radar,3,,前向雷达、前视主摄、前视长焦、右侧前、右前角雷达、左侧前、左前角雷达、激光雷达
+CUT-1,11V5R1L,暴雨 50 mm/h,14.1,True,150.7,camera+lidar+radar,3,,前向雷达、前视主摄、前视长焦、右侧前、右前角雷达、左侧前、左前角雷达、激光雷达
+CUT-1,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,14.1,True,150.7,camera+lidar+radar,3,,前向雷达、前视主摄、前视长焦、右侧前、右前角雷达、左侧前、左前角雷达、激光雷达
+CUT-2,1V1R,晴天,5.6,True,94.4,camera+radar,2,,前向雷达、前视摄像头
+CUT-2,1V1R,暴雨 50 mm/h,5.6,True,77.9,camera+radar,2,,前向雷达、前视摄像头
+CUT-2,1V1R,暴雨 50 mm/h + 水膜 3 dB,5.6,True,66.4,camera+radar,2,,前向雷达、前视摄像头
+CUT-2,5R1V,晴天,5.6,True,94.4,camera+radar,2,,前向雷达、前视摄像头、右前角雷达、左前角雷达
+CUT-2,5R1V,暴雨 50 mm/h,5.6,True,77.9,camera+radar,2,,前向雷达、前视摄像头、右前角雷达、左前角雷达
+CUT-2,5R1V,暴雨 50 mm/h + 水膜 3 dB,5.6,True,66.4,camera+radar,2,,前向雷达、前视摄像头、右前角雷达、左前角雷达
+CUT-2,11V5R1L,晴天,5.6,True,202.6,camera+lidar+radar,3,,前向雷达、前视主摄、右侧前、右前角雷达、左侧前、左前角雷达、激光雷达、环视前、环视右、环视左
+CUT-2,11V5R1L,暴雨 50 mm/h,5.6,True,147.1,camera+lidar+radar,3,,前向雷达、前视主摄、右侧前、右前角雷达、左侧前、左前角雷达、激光雷达、环视前
+CUT-2,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,5.6,True,147.1,camera+lidar+radar,3,,前向雷达、前视主摄、右侧前、右前角雷达、左侧前、左前角雷达、激光雷达、环视前
+CUT-3,1V1R,晴天,3.3,True,56.7,camera+radar,2,,前向雷达、前视摄像头
+CUT-3,1V1R,暴雨 50 mm/h,3.3,True,50.2,camera+radar,2,,前向雷达、前视摄像头
+CUT-3,1V1R,暴雨 50 mm/h + 水膜 3 dB,3.3,True,42.5,camera+radar,2,,前向雷达、前视摄像头
+CUT-3,5R1V,晴天,3.3,True,77.1,camera+radar,2,,前向雷达、前视摄像头、右前角雷达、左前角雷达
+CUT-3,5R1V,暴雨 50 mm/h,3.3,True,66.0,camera+radar,2,,前向雷达、前视摄像头、右前角雷达、左前角雷达
+CUT-3,5R1V,暴雨 50 mm/h + 水膜 3 dB,3.3,True,56.3,camera+radar,2,,前向雷达、前视摄像头、右前角雷达、左前角雷达
+CUT-3,11V5R1L,晴天,3.3,True,205.3,camera+lidar+radar,3,,前向雷达、前视主摄、右侧前、右前角雷达、左侧前、左前角雷达、激光雷达、环视前、环视右、环视左
+CUT-3,11V5R1L,暴雨 50 mm/h,3.3,True,149.8,camera+lidar+radar,3,,前向雷达、前视主摄、右侧前、右前角雷达、左侧前、左前角雷达、激光雷达、环视前、环视右、环视左
+CUT-3,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,3.3,True,149.8,camera+lidar+radar,3,,前向雷达、前视主摄、右侧前、右前角雷达、左侧前、左前角雷达、激光雷达、环视前、环视右、环视左
+CUT-4,1V1R,晴天,3.3,True,114.9,camera+radar,2,,前向雷达、前视摄像头
+CUT-4,1V1R,暴雨 50 mm/h,3.3,True,74.9,camera+radar,2,,前向雷达、前视摄像头
+CUT-4,1V1R,暴雨 50 mm/h + 水膜 3 dB,3.3,True,74.9,camera+radar,2,,前向雷达、前视摄像头
+CUT-4,5R1V,晴天,3.3,True,114.9,camera+radar,2,,前向雷达、前视摄像头、右前角雷达、左前角雷达
+CUT-4,5R1V,暴雨 50 mm/h,3.3,True,74.9,camera+radar,2,,前向雷达、前视摄像头、右前角雷达、左前角雷达
+CUT-4,5R1V,暴雨 50 mm/h + 水膜 3 dB,3.3,True,74.9,camera+radar,2,,前向雷达、前视摄像头、右前角雷达、左前角雷达
+CUT-4,11V5R1L,晴天,3.3,True,173.4,camera+lidar+radar,3,,前向雷达、前视主摄、右前角雷达、左前角雷达、激光雷达、环视前、环视右、环视左
+CUT-4,11V5R1L,暴雨 50 mm/h,3.3,True,131.1,camera+lidar+radar,3,,前向雷达、前视主摄、右前角雷达、左前角雷达、激光雷达、环视前、环视右、环视左
+CUT-4,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,3.3,True,131.1,camera+lidar+radar,3,,前向雷达、前视主摄、右前角雷达、左前角雷达、激光雷达、环视前、环视右、环视左
+BSD-1,1V1R,晴天,4.7,False,nan,,0,,
+BSD-1,1V1R,暴雨 50 mm/h,4.7,False,nan,,0,,
+BSD-1,1V1R,暴雨 50 mm/h + 水膜 3 dB,4.7,False,nan,,0,,
+BSD-1,5R1V,晴天,4.7,True,54.7,radar,1,,右后角雷达、左后角雷达
+BSD-1,5R1V,暴雨 50 mm/h,4.7,True,49.0,radar,1,,右后角雷达、左后角雷达
+BSD-1,5R1V,暴雨 50 mm/h + 水膜 3 dB,4.7,True,41.7,radar,1,,右后角雷达、左后角雷达
+BSD-1,11V5R1L,晴天,4.7,True,62.4,camera+radar,2,,右侧后、右后角雷达、左侧后、左后角雷达、环视右、环视后、环视左
+BSD-1,11V5R1L,暴雨 50 mm/h,4.7,True,49.0,camera+radar,2,,右侧后、右后角雷达、左侧后、左后角雷达、环视右、环视后、环视左
+BSD-1,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,4.7,True,41.7,camera+radar,2,,右侧后、右后角雷达、左侧后、左后角雷达、环视右、环视后、环视左
+BSD-2,1V1R,晴天,5.2,False,nan,,0,,
+BSD-2,1V1R,暴雨 50 mm/h,5.2,False,nan,,0,,
+BSD-2,1V1R,暴雨 50 mm/h + 水膜 3 dB,5.2,False,nan,,0,,
+BSD-2,5R1V,晴天,5.2,True,53.8,radar,1,,右后角雷达、左后角雷达
+BSD-2,5R1V,暴雨 50 mm/h,5.2,True,48.0,radar,1,,右后角雷达、左后角雷达
+BSD-2,5R1V,暴雨 50 mm/h + 水膜 3 dB,5.2,True,40.7,radar,1,,右后角雷达、左后角雷达
+BSD-2,11V5R1L,晴天,5.2,True,61.6,camera+radar,2,,右侧后、右后角雷达、左侧后、左后角雷达、环视右、环视后、环视左
+BSD-2,11V5R1L,暴雨 50 mm/h,5.2,True,48.0,camera+radar,2,,右侧后、右后角雷达、左侧后、左后角雷达、环视右、环视后、环视左
+BSD-2,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,5.2,True,40.7,camera+radar,2,,右侧后、右后角雷达、左侧后、左后角雷达、环视右、环视后、环视左
+BSD-3,1V1R,晴天,7.0,False,nan,,0,,
+BSD-3,1V1R,暴雨 50 mm/h,7.0,False,nan,,0,,
+BSD-3,1V1R,暴雨 50 mm/h + 水膜 3 dB,7.0,False,nan,,0,,
+BSD-3,5R1V,晴天,7.0,True,54.5,radar,1,,右后角雷达、左后角雷达
+BSD-3,5R1V,暴雨 50 mm/h,7.0,True,48.7,radar,1,,右后角雷达、左后角雷达
+BSD-3,5R1V,暴雨 50 mm/h + 水膜 3 dB,7.0,True,41.4,radar,1,,右后角雷达、左后角雷达
+BSD-3,11V5R1L,晴天,7.0,True,60.2,camera+radar,2,,右侧后、右后角雷达、左侧后、左后角雷达、环视右、环视后、环视左
+BSD-3,11V5R1L,暴雨 50 mm/h,7.0,True,48.7,camera+radar,2,,右侧后、右后角雷达、左侧后、左后角雷达、环视右、环视后、环视左
+BSD-3,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,7.0,True,41.4,camera+radar,2,,右侧后、右后角雷达、左侧后、左后角雷达、环视右、环视后、环视左
+BSD-4,1V1R,晴天,7.3,False,nan,,0,,
+BSD-4,1V1R,暴雨 50 mm/h,7.3,False,nan,,0,,
+BSD-4,1V1R,暴雨 50 mm/h + 水膜 3 dB,7.3,False,nan,,0,,
+BSD-4,5R1V,晴天,7.3,True,53.6,radar,1,,右后角雷达、左后角雷达
+BSD-4,5R1V,暴雨 50 mm/h,7.3,True,47.9,radar,1,,右后角雷达、左后角雷达
+BSD-4,5R1V,暴雨 50 mm/h + 水膜 3 dB,7.3,True,40.6,radar,1,,右后角雷达、左后角雷达
+BSD-4,11V5R1L,晴天,7.3,True,59.8,camera+radar,2,,右侧后、右后角雷达、左侧后、左后角雷达、环视右、环视后、环视左
+BSD-4,11V5R1L,暴雨 50 mm/h,7.3,True,47.9,camera+radar,2,,右侧后、右后角雷达、左侧后、左后角雷达、环视右、环视后、环视左
+BSD-4,11V5R1L,暴雨 50 mm/h + 水膜 3 dB,7.3,True,40.6,camera+radar,2,,右侧后、右后角雷达、左侧后、左后角雷达、环视右、环视后、环视左

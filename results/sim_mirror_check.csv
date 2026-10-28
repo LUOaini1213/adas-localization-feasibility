@@ -1,0 +1,9 @@
+﻿RHT 运行,LHT 运行,max|Δx| m,max|Δ(镜像 y)| m,max|Δv| m/s,指标完全一致
+F1-OS-sym-RHT,F1-OS-sym-LHT,0.0,0.0,0.0,True
+F1-OS-ove-RHT,F1-OS-ove-LHT,0.0,0.0,0.0,True
+F1-KS-sym-RHT,F1-KS-sym-LHT,0.0,0.0,0.0,True
+F1-KS-ove-RHT,F1-KS-ove-LHT,0.0,0.0,0.0,True
+F1-MC-sym-RHT,F1-MC-sym-LHT,0.0,0.0,0.0,True
+F1-MC-ove-RHT,F1-MC-ove-LHT,0.0,0.0,0.0,True
+F2-RHT-RHT_BASE,F2-LHT-GB,0.0,0.0,0.0,True
+F3-RHT-RHT_BASE,F3-LHT-GB,0.0,0.0,0.0,True

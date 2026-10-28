@@ -1,0 +1,27 @@
+﻿run_id,case_id,world,rules,cutin_mode,mirrored_ok,backend,note,collision,min_gap_m,min_ttc_s,max_decel_mps2,t_detect_cutter_s,inside_pass,inside_pass_vehicle,normal_pass,lc_side,lc_start_s,suppressed_by,start_check,lc_events,min_speed_kph,max_lat_acc_mps2,end_x_m
+F1-OS-sym-RHT,F1_CUTIN_OS,RHT,RHT_BASE,symmetric,True,esmini,镜像正确,False,14.21,12.41,3.5,0.28,False,,,,,,,,35.4,0.0,294.09
+F1-OS-sym-LHT,F1_CUTIN_OS,LHT,GB,symmetric,True,esmini,镜像正确,False,14.21,12.41,3.5,0.28,False,,,,,,,,35.4,0.0,294.09
+F1-OS-sym-LHT-unmirrored,F1_CUTIN_OS,LHT,RHT_BASE,symmetric,False,esmini,LHT 世界用 RHT 规则（未镜像）,False,14.21,12.41,3.5,0.28,False,,,,,,,,35.4,0.0,294.09
+F1-OS-ove-RHT,F1_CUTIN_OS,RHT,RHT_BASE,overtaking_side_only,True,esmini,镜像正确,False,14.21,12.41,3.5,0.28,False,,,,,,,,35.4,0.0,294.09
+F1-OS-ove-LHT,F1_CUTIN_OS,LHT,GB,overtaking_side_only,True,esmini,镜像正确,False,14.21,12.41,3.5,0.28,False,,,,,,,,35.4,0.0,294.09
+F1-OS-ove-LHT-unmirrored,F1_CUTIN_OS,LHT,RHT_BASE,overtaking_side_only,False,esmini,LHT 世界用 RHT 规则（未镜像）,False,5.77,2.24,7.62,1.26,False,,,,,,,,27.6,0.0,298.05
+F1-KS-sym-RHT,F1_CUTIN_KS,RHT,RHT_BASE,symmetric,True,esmini,镜像正确,False,14.21,12.41,3.5,0.28,False,,,,,,,,35.4,0.0,294.09
+F1-KS-sym-LHT,F1_CUTIN_KS,LHT,GB,symmetric,True,esmini,镜像正确,False,14.21,12.41,3.5,0.28,False,,,,,,,,35.4,0.0,294.09
+F1-KS-sym-LHT-unmirrored,F1_CUTIN_KS,LHT,RHT_BASE,symmetric,False,esmini,LHT 世界用 RHT 规则（未镜像）,False,14.21,12.41,3.5,0.28,False,,,,,,,,35.4,0.0,294.09
+F1-KS-ove-RHT,F1_CUTIN_KS,RHT,RHT_BASE,overtaking_side_only,True,esmini,镜像正确,False,5.77,2.24,7.62,1.26,False,,,,,,,,27.6,0.0,298.05
+F1-KS-ove-LHT,F1_CUTIN_KS,LHT,GB,overtaking_side_only,True,esmini,镜像正确,False,5.77,2.24,7.62,1.26,False,,,,,,,,27.6,0.0,298.05
+F1-KS-ove-LHT-unmirrored,F1_CUTIN_KS,LHT,RHT_BASE,overtaking_side_only,False,esmini,LHT 世界用 RHT 规则（未镜像）,False,14.21,12.41,3.5,0.28,False,,,,,,,,35.4,0.0,294.09
+F1-MC-sym-RHT,F1_CUTIN_MC,RHT,RHT_BASE,symmetric,True,esmini,镜像正确,False,15.31,8.21,3.5,0.44,False,,,,,,,,34.1,0.0,295.41
+F1-MC-sym-LHT,F1_CUTIN_MC,LHT,GB,symmetric,True,esmini,镜像正确,False,15.31,8.21,3.5,0.44,False,,,,,,,,34.1,0.0,295.41
+F1-MC-sym-LHT-unmirrored,F1_CUTIN_MC,LHT,RHT_BASE,symmetric,False,esmini,LHT 世界用 RHT 规则（未镜像）,False,15.31,8.21,3.5,0.44,False,,,,,,,,34.1,0.0,295.41
+F1-MC-ove-RHT,F1_CUTIN_MC,RHT,RHT_BASE,overtaking_side_only,True,esmini,镜像正确,False,6.16,2.21,7.67,1.26,False,,,,,,,,27.8,0.0,298.5
+F1-MC-ove-LHT,F1_CUTIN_MC,LHT,GB,overtaking_side_only,True,esmini,镜像正确,False,6.16,2.21,7.67,1.26,False,,,,,,,,27.8,0.0,298.5
+F1-MC-ove-LHT-unmirrored,F1_CUTIN_MC,LHT,RHT_BASE,overtaking_side_only,False,esmini,LHT 世界用 RHT 规则（未镜像）,False,15.31,8.21,3.5,0.44,False,,,,,,,,34.1,0.0,295.41
+F2-RHT-RHT_BASE,F2_UNDERTAKE,RHT,RHT_BASE,symmetric,True,esmini,镜像正确,False,,,1.57,,False,,,,,,,,80.0,0.0,694.74
+F2-LHT-GB,F2_UNDERTAKE,LHT,GB,symmetric,True,esmini,镜像正确,False,,,1.57,,False,,,,,,,,80.0,0.0,694.74
+F2-LHT-RHT_BASE,F2_UNDERTAKE,LHT,RHT_BASE,symmetric,False,esmini,未镜像,False,,,0.0,,True,SlowOT,,,,,,,100.0,0.0,856.97
+F2-LHT-AU,F2_UNDERTAKE,LHT,AU,symmetric,True,esmini,澳大利亚规则,False,,,0.0,,True,SlowOT,,,,,,,100.0,0.0,856.97
+F2-LHT-ID,F2_UNDERTAKE,LHT,ID,symmetric,True,esmini,印尼规则,False,,,1.57,,False,,,,,,,,80.0,0.0,694.74
+F3-RHT-RHT_BASE,F3_OVERTAKE,RHT,RHT_BASE,symmetric,True,esmini,镜像正确,False,45.38,11.72,1.7,,False,,Lead,超车侧,14.0,FastOT：间距 40.7 m，需要 54.7 m，来车所需减速度 6.44 m/s²,无来车（按 6.2.4.2 假设来车在后向量程处）：间距 80.0 m ≥ 需要 59.3 m,1.98:signal on; 4.98:suppressed (R171 6.2.4); 9.0:cancelled (not started within 7 s); 11.0:signal on; 14.0:manoeuvre start; 17.98:manoeuvre end,80.3,1.08,868.8
+F3-LHT-GB,F3_OVERTAKE,LHT,GB,symmetric,True,esmini,镜像正确,False,45.38,11.72,1.7,,False,,Lead,超车侧,14.0,FastOT：间距 40.7 m，需要 54.7 m，来车所需减速度 6.44 m/s²,无来车（按 6.2.4.2 假设来车在后向量程处）：间距 80.0 m ≥ 需要 59.3 m,1.98:signal on; 4.98:suppressed (R171 6.2.4); 9.0:cancelled (not started within 7 s); 11.0:signal on; 14.0:manoeuvre start; 17.98:manoeuvre end,80.3,1.08,868.8
+F3-LHT-RHT_BASE,F3_OVERTAKE,LHT,RHT_BASE,symmetric,False,esmini,未镜像,False,48.44,11.72,1.7,,True,Lead,,路缘侧,4.98,,无来车（按 6.2.4.2 假设来车在后向量程处）：间距 80.0 m ≥ 需要 54.7 m,1.98:signal on; 4.98:manoeuvre start; 8.96:manoeuvre end,82.6,1.08,944.61

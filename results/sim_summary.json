@@ -1,0 +1,13 @@
+{
+ "primary_backend": "esmini",
+ "cross_backend": "python",
+ "runs": 26,
+ "elapsed_s": 2.0,
+ "mirror_pairs": 8,
+ "mirror_all_identical": true,
+ "mirror_max_dx": 0.0,
+ "mirror_max_dy": 0.0,
+ "backend_all_discrete_equal": true,
+ "backend_max_dx": 0.1208,
+ "backend_max_dv": 0.0863
+}

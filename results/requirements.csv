@@ -1,0 +1,26 @@
+﻿编号,功能,工况,类型,目标,需求 m,半视场角 °,到车道线 s,到本车路径 s,依据,重点市场
+AEB-1,AEB,R152 上限 60 km/h 静止目标，FCW 提前 0.8 s，5.0 m/s²,forward,car,52.3,,,,R152 5.2.1.1/5.2.1.2/5.2.1.3；A-02/03/06,EU GB AU MY TH
+AEB-2,AEB,CCRs 50 km/h 只制动（Euro NCAP AEB 上限）,forward,car,25.7,,,,Euro NCAP v1.2 3.1.1.1；A-02/03/04/06,EU GB AU
+AEB-3,AEB,CCRs 80 km/h，FCW 提前 0.8 s 后制动,forward,car,73.2,,,,Euro NCAP v1.2 3.1.1.1；R152 5.2.1.1；A-02/03/04/06,EU GB AU
+AEB-4,AEB,CCRm 130 → 70 km/h（Δv 60），FCW 0.8 s,forward,car,47.6,,,,Euro NCAP v1.2 3.1.1.1；A-02/03/04/06,EU GB AU
+AEB-5,AEB,同 AEB-3，湿路 5.0 m/s²,forward,car,81.4,,,,A-04（湿路）,MY TH ID GB
+AEB-6,AEB 摩托车,CMRm 60 km/h，25 % 重叠，FCW 0.8 s,forward,motorcycle,47.6,,,,ASEAN NCAP MS v2.0 Table 5；A-02/03/04/06/11,MY TH ID
+ACC-1,ACC,130 km/h 接近 80 km/h 前车，2.0 m/s²，时距 1.8 s,forward,car,95.2,,,,A-05,EU
+ACC-2,ACC,英国 70 mph 接近 80 km/h 前车，2.0 m/s²，时距 2 s,forward,car,69.5,,,,Highway Code r124/r126；A-05,GB
+ACC-3,ACC,同 ACC-2，湿路时距加倍到 4 s,forward,car,114.0,,,,Highway Code r126；A-05,GB
+ACC-4,ACC,130 km/h 对静止车（队尾），舒适 2.0 m/s²,forward,car,349.1,,,,A-05,EU
+ACC-5,ACC,130 km/h 对静止车，3.5 m/s²,forward,car,209.3,,,,A-05,EU
+LC-1,变道,系统发起，本车 80、来车 130 km/h，A = 0.4 s,rear_adjacent,car,59.9,,,,R171 6.2.4.1/6.2.4.2,EU
+LC-2,变道,同 LC-1，来车未持续跟踪 1 s，A = 1.4 s,rear_adjacent,car,73.8,,,,R171 6.2.4.1(ii),EU
+LC-3,变道,系统发起，本车 100、来车 130 km/h，A = 0.4 s,rear_adjacent,car,42.7,,,,R171 6.2.4.1/6.2.4.2,EU
+LC-4,变道,英国，驾驶员确认，本车 80、假设来车 123.9 km/h（70 mph + 10 %）,rear_adjacent,car,51.9,,,,R171 6.2.9.1.2；Highway Code r124,GB
+LC-5,变道,英国，系统发起，本车 80、假设来车 112.7 km/h（70 mph）,rear_adjacent,car,39.6,,,,R171 6.2.4.2；Highway Code r124,GB
+LC-6,变道,拥堵中摩托车从后方穿行：本车 30、摩托车 60 km/h，A = 0.4 s,rear_adjacent,motorcycle,23.2,,,,R171 6.2.4.1 结构；A-09,MY TH ID
+CUT-1,切入,100 km/h，切入车距 0.5 s（13.9 m）,fov,car,14.1,10.6,0.85,1.68,A-01/07,全部
+CUT-2,切入,拥堵切入，车距 5 m,fov,car,5.6,27.5,0.85,1.68,A-01/07,全部
+CUT-3,切入,近距加塞，车距 2 m,fov,car,3.3,52.4,0.85,1.68,A-01/07,全部
+CUT-4,切入（摩托车）,摩托车穿行后切入，距 3 m,fov,motorcycle,3.3,24.2,,0.43,A-08；ASEAN NCAP MS v2.0 4.1,MY TH ID
+BSD-1,盲区（摩托车）,摩托车中心 x = -4.2 m、横向 2 m,fov,motorcycle,4.7,154.5,,,ASEAN NCAP MS v2.0 3.4.1 Table 1；A-10,MY TH ID
+BSD-2,盲区（摩托车）,摩托车中心 x = -4.2 m、横向 3 m,fov,motorcycle,5.2,144.5,,,ASEAN NCAP MS v2.0 3.4.1 Table 1；A-10,MY TH ID
+BSD-3,盲区（摩托车）,摩托车中心 x = -6.7 m、横向 2 m,fov,motorcycle,7.0,163.4,,,ASEAN NCAP MS v2.0 3.4.1 Table 1；A-10,MY TH ID
+BSD-4,盲区（摩托车）,摩托车中心 x = -6.7 m、横向 3 m,fov,motorcycle,7.3,155.9,,,ASEAN NCAP MS v2.0 3.4.1 Table 1；A-10,MY TH ID

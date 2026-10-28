@@ -1,0 +1,75 @@
+esmini GIT REV: v3.10.2-0-d1d4423b
+esmini GIT TAG: v3.10.2
+esmini GIT BRANCH: tags/v3.10.2^0
+esmini BUILD VERSION: 6464
+[] [info] Loaded F3_OVERTAKE_LHT.xosc
+[2026-10-28 02:36:42]
+[] [info] Player options: --osc F3_OVERTAKE_LHT.xosc --camera_mode orbit --csv_logger ../results/esmini_logs/F3-LHT-RHT_BASE.csv --collision --disable_stdout --fixed_timestep 0.02 --ground_plane auto --headless --info_text 1 --logfile_path ../results/esmini_logs/F3-LHT-RHT_BASE.log.txt --log_level info --text_scale 1.0 --traj_filter 0.1 --light_mode auto 
+[] [info] Run simulation decoupled from realtime, with fixed timestep: 0.02
+[] [info] Generated seed 530681384
+[] [info] Loading F3_OVERTAKE_LHT.xosc (v1.2)
+[] [info] ParameterDeclarations contains parameters with modified values, all parameters and variables will be re-evaluated
+[] [warn] Parameter value ExtCtrl updated from false to true
+[] [info] 0 variables
+[] [info] Loaded OpenDRIVE: road_LHT.xodr
+[] [info] 3D model search paths attempted for file car_white.osgb:
+[] [info]   car_white.osgb
+[] [info]   .//./car_white.osgb
+[] [info]   <esmini_dir>\bin/../resources/models//./car_white.osgb
+[] [info]   .//../models/./car_white.osgb
+[] [warn] 3D model car_white.osgb not located, using specified file path
+[] [info] Assigned 3D model car_white.osgb to vehicle ego
+[] [info] Add and deactivate new object "Ego" (id 0)
+[] [info] 3D model search paths attempted for file car_red.osgb:
+[] [info]   car_red.osgb
+[] [info]   .//./car_red.osgb
+[] [info]   <esmini_dir>\bin/../resources/models//./car_red.osgb
+[] [info]   .//../models/./car_red.osgb
+[] [warn] 3D model car_red.osgb not located, using specified file path
+[] [info] Assigned 3D model car_red.osgb to vehicle lead
+[] [info] Add and deactivate new object "Lead" (id 1)
+[] [info] 3D model search paths attempted for file car_red.osgb:
+[] [info]   car_red.osgb
+[] [info]   .//./car_red.osgb
+[] [info]   <esmini_dir>\bin/../resources/models//./car_red.osgb
+[] [info]   .//../models/./car_red.osgb
+[] [warn] 3D model car_red.osgb not located, using specified file path
+[] [info] Assigned 3D model car_red.osgb to vehicle fastot
+[] [info] Add and deactivate new object "FastOT" (id 2)
+[] [info] 1 parameters:
+[] [info]    ExtCtrl = true
+[0.000] [info] Log all vehicle data in csv file
+[0.000] [info] Init Ego TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] Ego New position:
+[0.000] [info] Pos(100.00, 5.25, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId 2 s 100.00 offset 0.00 t 5.25
+[0.000] [info] Init Ego TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init Ego LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init Ego LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Controller P9_ExternalController active on domains: Lateral & Longitudinal (mask=0x3)
+[0.000] [info] Init Ego ControllerAction initState -> startTransition -> runningState
+[0.000] [info] Init Ego ControllerAction runningState -> endTransition -> completeState
+[0.000] [info] Init Lead TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] Lead New position:
+[0.000] [info] Pos(170.00, 5.25, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId 2 s 170.00 offset 0.00 t 5.25
+[0.000] [info] Init Lead TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init Lead LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init Lead LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Init FastOT TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] FastOT New position:
+[0.000] [info] Pos(0.00, 1.75, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId 1 s 0.00 offset 0.00 t 1.75
+[0.000] [info] Init FastOT TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init FastOT LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init FastOT LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] storyBoard initState -> startTransition -> runningState
+[0.000] [info] story initState -> startTransition -> runningState
+[0.000] [info] act initState -> initToStandbyTransition -> standbyState
+[0.000] [info] act_start: true, delay: 0.00, 0.0000 >= 0.0000, edge: none
+[0.000] [info] Trigger /------------------------------------------------
+[0.000] [info] Group 0:
+[0.000] [info] act_start: true
+[0.000] [info] Trigger  ------------------------------------------------/
+[0.000] [info] act standbyState -> startTransition -> runningState
+[30.000] [info] Closing

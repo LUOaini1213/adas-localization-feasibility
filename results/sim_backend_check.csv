@@ -1,0 +1,27 @@
+﻿运行,max|Δx| m,max|Δy| m,max|Δv| m/s,最小间距 esmini/Python,离散结果一致
+F1-OS-sym-RHT,0.0329,0.0,0.008,14.21/14.23,True
+F1-OS-sym-LHT,0.0329,0.0,0.008,14.21/14.23,True
+F1-OS-sym-LHT-unmirrored,0.0329,0.0,0.008,14.21/14.23,True
+F1-OS-ove-RHT,0.0329,0.0,0.008,14.21/14.23,True
+F1-OS-ove-LHT,0.0329,0.0,0.008,14.21/14.23,True
+F1-OS-ove-LHT-unmirrored,0.1208,0.0,0.0863,5.77/5.76,True
+F1-KS-sym-RHT,0.0329,0.0,0.008,14.21/14.23,True
+F1-KS-sym-LHT,0.0329,0.0,0.008,14.21/14.23,True
+F1-KS-sym-LHT-unmirrored,0.0329,0.0,0.008,14.21/14.23,True
+F1-KS-ove-RHT,0.1208,0.0,0.0863,5.77/5.76,True
+F1-KS-ove-LHT,0.1208,0.0,0.0863,5.77/5.76,True
+F1-KS-ove-LHT-unmirrored,0.0329,0.0,0.008,14.21/14.23,True
+F1-MC-sym-RHT,0.0312,0.0,0.008,15.31/15.33,True
+F1-MC-sym-LHT,0.0312,0.0,0.008,15.31/15.33,True
+F1-MC-sym-LHT-unmirrored,0.0312,0.0,0.008,15.31/15.33,True
+F1-MC-ove-RHT,0.0504,0.0,0.083,6.16/6.16,True
+F1-MC-ove-LHT,0.0504,0.0,0.083,6.16/6.16,True
+F1-MC-ove-LHT-unmirrored,0.0312,0.0,0.008,15.31/15.33,True
+F2-RHT-RHT_BASE,0.0,0.0,0.0,None/None,True
+F2-LHT-GB,0.0,0.0,0.0,None/None,True
+F2-LHT-RHT_BASE,0.0,0.0,0.0,None/None,True
+F2-LHT-AU,0.0,0.0,0.0,None/None,True
+F2-LHT-ID,0.0,0.0,0.0,None/None,True
+F3-RHT-RHT_BASE,0.0,0.0,0.0,45.38/45.38,True
+F3-LHT-GB,0.0,0.0,0.0,45.38/45.38,True
+F3-LHT-RHT_BASE,0.0,0.0,0.0,48.44/48.44,True
