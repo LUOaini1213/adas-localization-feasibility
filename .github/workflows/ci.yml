@@ -28,7 +28,7 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: Install
         run: python -m pip install -r requirements.txt
-      - name: Regenerate (no esmini: Python-only simulation goes to results/python_only/)
+      - name: Regenerate without esmini (Python-only simulation goes to results/python_only/)
         run: |
           python -X utf8 -B -I scripts/make_scenarios.py
           python -X utf8 -B -I scripts/run_feasibility.py
