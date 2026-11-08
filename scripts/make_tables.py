@@ -64,6 +64,11 @@ class Data:
         self.mirror = read(RES / "sim_mirror_check.csv")
         self.backend = read(RES / "sim_backend_check.csv") if (RES / "sim_backend_check.csv").exists() else []
         self.sim_summary = json.loads((RES / "sim_summary.json").read_text(encoding="utf-8"))
+        if self.sim_summary.get("primary_backend") != "esmini" or not self.backend:
+            raise SystemExit("results/sim_summary.json is not from an esmini run (primary_backend="
+                             f"{self.sim_summary.get('primary_backend')!r}); the tables are built from the committed "
+                             "esmini results. Restore them with `git checkout -- results/` or rerun run_sim.py "
+                             "--esmini-lib <esminiLib>.")
 
     def feas_row(self, rid, suite, cond):
         for r in self.feas:
@@ -246,7 +251,7 @@ def build() -> str:
     d = Data()
     sor = sor_rows(d)
     with open(RES / "sor_summary.csv", "w", newline="", encoding="utf-8-sig") as f:
-        w = csv.DictWriter(f, fieldnames=list(sor[0]))
+        w = csv.DictWriter(f, fieldnames=list(sor[0]), lineterminator="\n")
         w.writeheader()
         w.writerows(sor)
     srcs = {r["编号"] for r in d.sources}
@@ -256,7 +261,7 @@ def build() -> str:
                 raise ValueError(f"{r['编号']}: unknown source {sid}")
     n_ver = sum(r["核实状态"] == "已核实" for r in d.matrix)
     parts = [
-        "# P9 结果表（由 scripts/make_tables.py 生成，请勿手改）\n",
+        "# adas-localization-feasibility（P9）结果表（由 scripts/make_tables.py 生成，请勿手改）\n",
         f"法规矩阵 {len(d.matrix)} 行（已核实 {n_ver}，部分核实 "
         f"{sum(r['核实状态'] == '部分核实' for r in d.matrix)}，未核实 {sum(r['核实状态'] == '未核实' for r in d.matrix)}）；"
         f"左行/右舵差异 {len(d.deltas)} 项；来源 {len(d.sources)} 条；需求 {len(d.reqs)} 条 × 方案 3 × 工况 3 = "
@@ -317,7 +322,8 @@ def build() -> str:
 
 def main() -> int:
     text = build()
-    (RES / "tables.md").write_text(text, encoding="utf-8")
+    with open(RES / "tables.md", "w", encoding="utf-8", newline="\n") as f:
+        f.write(text)
     print(f"wrote results/tables.md ({len(text.splitlines())} lines) and results/sor_summary.csv")
     return 0
 

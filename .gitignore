@@ -1,5 +1,8 @@
 __pycache__/
 *.pyc
 .pytest_cache/
+.venv/
 # JUnit output contains the machine hostname; regenerate locally
 results/pytest_junit.xml
+# python-only fallback of run_sim.py (no esmini); never overwrites the committed esmini results
+results/python_only/

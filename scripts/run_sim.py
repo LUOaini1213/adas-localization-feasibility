@@ -1,10 +1,13 @@
 """Run the mirrored LHT / RHT simulation set (esmini primary, Python backend as cross-check).
 
-Run:  python -X utf8 -B -I scripts/run_sim.py --esmini-lib <path to esminiLib.dll>
+Run:  python -X utf8 -B -I scripts/run_sim.py --esmini-lib <path to esminiLib(.dll|.so)>
       python -X utf8 -B -I scripts/run_sim.py --backend python          (no esmini)
-Single process on purpose (24 short runs per backend); no worker pool.
 
-Outputs (results/):
+Without esmini the Python-only run writes to results/python_only/ (git-ignored) so it never overwrites
+the committed esmini results that results/tables.md and report.md are built from.  --out overrides.
+Single process on purpose (26 short runs per backend); no worker pool.
+
+Outputs (results/ for an esmini run, results/python_only/ for a Python-only run):
   sim_runs.csv           metrics of every run (primary backend)
   sim_mirror_check.csv   RHT run vs mirrored LHT run with the matching rule set: trajectory deviation
   sim_backend_check.csv  esmini vs Python backend for every run
@@ -22,7 +25,7 @@ sys.path.insert(0, str(ROOT))
 
 from sim.runner import run, run_list  # noqa: E402
 
-RES = ROOT / "results"
+RESULTS = ROOT / "results"
 FIELDS = ["run_id", "case_id", "world", "rules", "cutin_mode", "mirrored_ok", "backend", "note", "collision",
           "min_gap_m", "min_ttc_s", "max_decel_mps2", "t_detect_cutter_s", "inside_pass", "inside_pass_vehicle",
           "normal_pass", "lc_side", "lc_start_s", "suppressed_by", "start_check", "lc_events", "min_speed_kph",
@@ -31,7 +34,7 @@ FIELDS = ["run_id", "case_id", "world", "rules", "cutin_mode", "mirrored_ok", "b
 
 def write_csv(path, rows, fields):
     with open(path, "w", newline="", encoding="utf-8-sig") as f:
-        w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
 
@@ -50,15 +53,26 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--esmini-lib")
     ap.add_argument("--backend", choices=["esmini", "python"], default=None)
+    ap.add_argument("--out", help="output directory (default: results/ for esmini, results/python_only/ otherwise)")
     args = ap.parse_args()
     primary = args.backend or ("esmini" if args.esmini_lib else "python")
+    if primary == "esmini" and not args.esmini_lib:
+        ap.error("--backend esmini needs --esmini-lib")
     cross = "python" if primary == "esmini" else None
+    res = Path(args.out) if args.out else (RESULTS if primary == "esmini" else RESULTS / "python_only")
+    run_sim(primary, cross, args.esmini_lib, res)
+    return 0
+
+
+def run_sim(primary, cross, esmini_lib, res: Path) -> dict:
+    RES = res
+    RES.mkdir(parents=True, exist_ok=True)
     (RES / "sim_timeseries").mkdir(parents=True, exist_ok=True)
     t0 = time.time()
     runs = run_list()
     prim, sec = {}, {}
     for rs in runs:
-        prim[rs.run_id] = run(rs, primary, args.esmini_lib, record=True,
+        prim[rs.run_id] = run(rs, primary, esmini_lib, record=True,
                               log_stem=rs.run_id if primary == "esmini" else None)
         if cross:
             sec[rs.run_id] = run(rs, cross, None, record=True)
@@ -68,7 +82,7 @@ def main() -> int:
         s = m.pop("series")
         rows.append(m)
         with open(RES / "sim_timeseries" / f"{rs.run_id}.csv", "w", newline="", encoding="utf-8") as f:
-            w = csv.writer(f)
+            w = csv.writer(f, lineterminator="\n")
             w.writerow(list(s))
             for r in zip(*s.values()):
                 w.writerow([f"{v:.4f}" if isinstance(v, float) else v for v in r])
@@ -110,9 +124,11 @@ def main() -> int:
                "backend_all_discrete_equal": all(r["离散结果一致"] for r in back_rows) if back_rows else None,
                "backend_max_dx": max((r["max|Δx| m"] for r in back_rows), default=None),
                "backend_max_dv": max((r["max|Δv| m/s"] for r in back_rows), default=None)}
-    (RES / "sim_summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=1), encoding="utf-8")
+    (RES / "sim_summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=1), encoding="utf-8",
+                                      newline="\n")
     print(json.dumps(summary, ensure_ascii=False))
-    return 0
+    print(f"wrote {RES}")
+    return summary
 
 
 if __name__ == "__main__":

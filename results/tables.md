@@ -1,4 +1,4 @@
-# P9 结果表（由 scripts/make_tables.py 生成，请勿手改）
+# adas-localization-feasibility（P9）结果表（由 scripts/make_tables.py 生成，请勿手改）
 
 法规矩阵 88 行（已核实 71，部分核实 11，未核实 6）；左行/右舵差异 10 项；来源 67 条；需求 25 条 × 方案 3 × 工况 3 = 225 项检查；仿真 26 次。
 
@@ -438,11 +438,11 @@
 | S80 | Recommendation ITU-R P.838-3：Specific attenuation model for rain | 2005-03 | 本项目读取公式 (1) 与 Table 5 的 77 GHz 系数（2026-10-28） | https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.838-3-200503-I!!PDF-E.pdf |
 | S81 | Hesai AT128 产品页 | 访问 2026-10-28 | 本项目读取：210 m @10 % 反射率，120° × 25.4° | https://www.hesaitech.com/product/at128/ |
 | S82 | Bosch Multi-camera system plus 产品单页 | 访问 2026-10-28 | 本项目读取：水平视场 > 190°，最多 6 个摄像头 + 24 个超声波 | https://www.bosch-mobility.com/media/global/solutions/passenger-cars-and-light-commercial-vehicles/driver-assistance-systems/multi-camera-system/onepager_multi-camera_system_en.pdf |
-| S83 | Bosch front radar（premium）产品单页 | 访问 2026-10-28 | 只见检索摘要（最远 302 m、水平 ±60°）；直接打开返回 404，只作上限参考 | https://www.bosch-mobility.com/media/global/solutions/passenger-cars-and-light-commercial-vehicles/driver-assistance-systems/multi-camera-system/front-radar-plus/onepager_front-radar_en-premium.pdf |
+| S83 | Bosch front radar（premium）产品单页 | 访问 2026-10-28 | 原链接 2026-11 返回 404；改用 archive.org 2025-03-20 快照，PDF 原文：探测距离最远 302 m，水平视场 ±60°，垂直 ±12°；只作上限参考 | https://web.archive.org/web/20250320103958/https://www.bosch-mobility.com/media/global/solutions/passenger-cars-and-light-commercial-vehicles/driver-assistance-systems/multi-camera-system/front-radar-plus/onepager_front-radar_en-premium.pdf |
 | S84 | Euro NCAP On-road driving 页面（限速辅助实路测试） | 访问 2026-10-28 | 检索子任务读取；Safe Driving – Vehicle Assistance v1.2 规程 PDF 未能解析 | https://www.euroncap.com/on-road-driving/ |
 | S85 | Euro NCAP Crash Avoidance – Frontal Collisions Protocol v1.2 | 2026-07 | P5 report.md 第 2 节、aebtest/regulations.py | （P5 已读；P5 未记录 URL） |
 | S86 | Euro NCAP Safe Driving – Driver Engagement Protocol v1.2 | 2026 | P7 已读 | https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Driver_Engagement_v1_2_ebce03a443.pdf |
 | S87 | Euro NCAP Safe Driving – Vehicle Assistance Protocol v1.2 | 2026-07（封面写 Version 1.1.0，页眉写 1.2） | WebFetch 无法解析压缩文本；本项目用 pdfplumber 读取 WebFetch 自动缓存的同一 PDF，核对 §1.2.1、§1.2.2（2026-10-28） | https://cdn.euroncap.com/cars/assets/Euro_NCAP_Protocol_Safe_Driving_Vehicle_Assistance_v1_2_b6fb486fa6.pdf |
-| S90 | P5 AEB 法规场景测试 report.md（湿路、雨天量程的模型内结果） | 2026-10 | 模型内结论，非实车 | ..\P5_AEB法规场景测试\report.md |
-| S91 | P7 座舱 DMS 与分心预警（需求与测试） | 2026-10 | 模型内结论，非实车 | ..\P7_座舱DMS与分心预警\README.md |
-| S92 | P2 东南亚智能化对标 regulation_requirements.csv（46 条法规与评级要求） | 2026-10-27 | 被本项目以「复用」列引用 | ..\P2_东南亚智能化对标\regulation_requirements.csv |
+| S90 | P5 r152-aeb-scenario-tests report.md（湿路、雨天量程的模型内结果） | 2026-10 | 模型内结论，非实车 | https://github.com/LUOaini1213/r152-aeb-scenario-tests/blob/main/report.md |
+| S91 | P7 dms-distraction-warning-tests（需求与测试） | 2026-10 | 模型内结论，非实车 | https://github.com/LUOaini1213/dms-distraction-warning-tests/blob/main/README.md |
+| S92 | P2 malaysia-smart-feature-benchmark regulation_requirements.csv（46 条法规与评级要求） | 2026-10-27 | 被本项目以「复用」列引用 | https://github.com/LUOaini1213/malaysia-smart-feature-benchmark/blob/main/regulation_requirements.csv |

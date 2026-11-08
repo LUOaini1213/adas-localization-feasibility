@@ -1,4 +1,4 @@
-"""P9 sensor-suite feasibility calculator.
+"""adas-localization-feasibility (P9): sensor-suite feasibility calculator.
 
 requirements.py  - function requirements -> required detection range / FOV / latency budget
                    (AEB, ACC, lane-change rear coverage per UN R171 6.2.4 / UN R79 5.6.4.7, cut-in FOV)
