@@ -1,4 +1,4 @@
-"""P9 mirrored left-hand-traffic (LHT) vs right-hand-traffic (RHT) simulation check.
+"""adas-localization-feasibility (P9): mirrored left-hand-traffic (LHT) vs right-hand-traffic (RHT) simulation check.
 
 scenario.py        - traffic-side-neutral scenario specs, mirroring (lane index -> lane id), xodr/xosc writer
 esmini_backend.py  - esmini v3.10.2 through esminiLib (ctypes); adapted from the P5 harness

@@ -3,8 +3,9 @@
 Cited specifications (vendor product documents, accessed 2026-10-28):
   S81 Hesai AT128 product page: 210 m @ 10 % reflectivity, FOV 120 deg x 25.4 deg.
   S82 Bosch "Multi-camera system plus" one-pager: horizontal FOV > 190 deg, up to 6 cameras + 24 ultrasonic.
-  S83 Bosch front radar (premium) one-pager: up to 302 m, horizontal +/-60 deg (seen only via a search
-      summary; the PDF link returned 404 when fetched) -> used only as an upper sanity bound.
+  S83 Bosch front radar (premium) one-pager: up to 302 m, horizontal +/-60 deg, vertical +/-12 deg
+      (the original link returns 404; read from the archive.org snapshot of 2025-03-20, see data/sources.csv)
+      -> used only as an upper sanity bound.
 Everything else is a labelled assumption (A-16 .. A-20 below).  The suites are deliberately
 conservative: the long-range radar is modelled with 200 m (not 302 m).
 """

@@ -32,13 +32,8 @@ def sections(tables: str) -> dict[str, str]:
     return out
 
 
-def main() -> int:
-    secs = sections((ROOT / "results" / "tables.md").read_text(encoding="utf-8"))
-    path = ROOT / "report.md"
-    if not path.exists():
-        print("report.md not found - nothing to synchronise")
-        return 0
-    text = path.read_text(encoding="utf-8")
+def synchronise(text: str, secs: dict[str, str]) -> tuple[str, int]:
+    """Return the report text with every AUTO block replaced by its tables.md section, and the block count."""
     n = 0
 
     def rep(m):
@@ -49,8 +44,18 @@ def main() -> int:
         n += 1
         return f"<!-- AUTO:{key} -->\n{secs[key]}\n<!-- /AUTO -->"
 
-    new = re.sub(r"<!-- AUTO:(表 \d+) -->.*?<!-- /AUTO -->", rep, text, flags=re.S)
-    path.write_text(new, encoding="utf-8")
+    return re.sub(r"<!-- AUTO:(表 \d+) -->.*?<!-- /AUTO -->", rep, text, flags=re.S), n
+
+
+def main() -> int:
+    secs = sections((ROOT / "results" / "tables.md").read_text(encoding="utf-8"))
+    path = ROOT / "report.md"
+    if not path.exists():
+        print("report.md not found - nothing to synchronise")
+        return 0
+    new, n = synchronise(path.read_text(encoding="utf-8"), secs)
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(new)
     print(f"report.md: {n} blocks synchronised")
     return 0
 

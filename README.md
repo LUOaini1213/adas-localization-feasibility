@@ -1,6 +1,14 @@
 # 海外智驾本地化可行性分析：欧盟、英国、澳大利亚与东盟（马来西亚、泰国、印尼）
 
-> 文中的 P2 / P5 / P7 指作者的其他公开仓库：P2 = [malaysia-smart-feature-benchmark](https://github.com/LUOaini1213/malaysia-smart-feature-benchmark)，P5 = [r152-aeb-scenario-tests](https://github.com/LUOaini1213/r152-aeb-scenario-tests)，P7 = [dms-distraction-warning-tests](https://github.com/LUOaini1213/dms-distraction-warning-tests)。
+[![CI](https://github.com/LUOaini1213/adas-localization-feasibility/actions/workflows/ci.yml/badge.svg)](https://github.com/LUOaini1213/adas-localization-feasibility/actions/workflows/ci.yml)
+
+**English summary.** An engineering study of what an existing ADAS / L2 feature set must change to launch in the EU, UK, Australia, Malaysia, Thailand and Indonesia.
+Built: an 88-row clause-level regulation matrix (71 verified, 67 sources), 10 left-hand-traffic / right-hand-drive deltas, a pure-Python sensor-suite feasibility calculator (R171 / R79 rear-gap formulas, ITU-R P.838-3 rain attenuation) and mirrored RHT / LHT esmini scenarios with a pure-Python cross-check backend.
+Found: of 25 derived requirements the 1V1R / 5R1V / 11V5R1L suites cover 13 / 23 / 24 in clear weather; in 50 mm/h rain the 80 m corner radar drops to 68.9 m, below the 73.8 m a lane change at 80 km/h needs.
+In the mirrored simulation, kerb-side cut-in detection that only watches the overtaking side responds 0.98 s later (minimum gap 14.21 m → 5.77 m); matched rule sets give identical trajectories in all 8 RHT / LHT pairs.
+Limits: clause-level reading only, no certification judgement; sensor specs are mostly labelled assumptions; the simulation uses ground-truth perception and is a logic check, not a performance result. The README below is in Chinese; this is not a compliance claim.
+
+> 文中的 P2 / P5 / P7 指作者的其他公开仓库：P2 = [malaysia-smart-feature-benchmark](https://github.com/LUOaini1213/malaysia-smart-feature-benchmark)，P5 = [r152-aeb-scenario-tests](https://github.com/LUOaini1213/r152-aeb-scenario-tests)，P7 = [dms-distraction-warning-tests](https://github.com/LUOaini1213/dms-distraction-warning-tests)；P9 是本仓库在该系列中的编号（esmini 日志里的控制器名 `P9_ExternalController` 沿用此编号）。
 
 回答一个工程问题：一套已有的 ADAS / L2 功能（AEB、车道支持、ISA、DMS、EDR、ACC、L2 车道居中与变道）要在这 6 个市场上市，各要改什么，现有传感器方案够不够。做法分四步：
 
@@ -30,6 +38,10 @@
 | 镜像仿真（esmini，模型内） | 规则集与世界匹配时，8 组右行 / 左行运行的轨迹逐点一致（偏差 0.0 m）；左行世界用右行规则时，系统发起的超车变道变到路缘侧，并从内侧超越前车；超车道有慢车时也会从内侧超越 | 表 10、表 11 |
 | 切入检测必须两侧对称 | 只看超车侧的检测，对路缘侧切入晚 0.98 s 才响应：最小间距从 14.21 m 降到 5.77 m，制动从 3.5 m/s² 升到 7.62 m/s² | 表 10 F1 |
 | 仿真可信度 | esmini 与纯 Python 后端 26 次运行的离散结果全部一致，自车位置最大差 0.12 m | 表 11 |
+
+![左行 / 右行镜像仿真：自车轨迹与车速（esmini，模型内）](results/fig_mirror.png)
+
+表中数字都来自 `results/` 下提交的文件，由 `tests/test_headline_numbers.py` 逐项钉住（同时检查本 README 的文字）；`results/tables.md` 与 report.md 的表格须与脚本重新生成的结果逐字节一致，CI 在 Ubuntu 与 Windows 上检查。
 
 ## 主要发现
 
@@ -72,7 +84,23 @@
 
 ## 复现
 
-在仓库根目录下运行（需要 esmini v3.10.2 官方发布包，把 `$L` 指向其中的 `bin\esminiLib.dll`）：
+依赖：Python ≥ 3.11（CI 测 3.11 与 3.13），`pip install -r requirements.txt`（pytest；matplotlib 只用于画图）。
+
+**没有 esmini（任何系统，CI 跑的就是这条）**：
+
+```bash
+python -X utf8 -B -I scripts/make_scenarios.py
+python -X utf8 -B -I scripts/run_feasibility.py
+python -X utf8 -B -I scripts/run_sim.py --backend python     # 写到 results/python_only/（不入库），不覆盖提交的 esmini 结果
+python -X utf8 -B -I scripts/make_tables.py                  # 从提交的 esmini 结果重建 results/tables.md
+python -X utf8 -B -I scripts/sync_report.py
+python -X utf8 -B -I -m pytest -q -p no:cacheprovider tests  # 35 项通过、1 项跳过（esmini 交叉检查）
+git diff --exit-code --ignore-cr-at-eol -- results/ report.md scenarios/
+```
+
+纯 Python 后端与 esmini 的离散结果一致，但连续量在小数点后第二位可能不同（例如最小间距 14.23 / 14.21 m），所以它的输出单独放在 `results/python_only/`。`make_tables.py` 只接受 esmini 生成的 `results/sim_summary.json`。
+
+**完整复现（需要 [esmini v3.10.2 官方发布包](https://github.com/esmini/esmini/releases/tag/v3.10.2)）**，Windows 用 `bin\esminiLib.dll`：
 
 ```powershell
 $L = "<esmini 目录>\bin\esminiLib.dll"
@@ -82,12 +110,18 @@ python -X utf8 -B -I scripts/run_sim.py --esmini-lib $L      # 26 次运行 × 2
 python -X utf8 -B -I scripts/make_tables.py                   # results/tables.md、results/sor_summary.csv
 python -X utf8 -B -I scripts/sync_report.py                   # 把 tables.md 的表同步进 report.md
 python -X utf8 -B -I scripts/make_plots.py                    # results/fig_mirror.png
-$env:ESMINI_LIB = $L; python -X utf8 -B -I -m pytest -q -p no:cacheprovider tests   # 30 项
+$env:ESMINI_LIB = $L; python -X utf8 -B -I -m pytest -q -p no:cacheprovider tests   # 36 项
 ```
 
-- 没有 esmini 时用 `run_sim.py --backend python`，pytest 为 29 项通过、1 项跳过。
+Linux 用发布包里的 `bin/libesminiLib.so`（本仓库提交的 esmini 结果是在 Windows 上跑的；Linux 下的 esmini 路径未实测）：
+
+```bash
+L="<esmini 目录>/bin/libesminiLib.so"
+python -X utf8 -B -I scripts/run_sim.py --esmini-lib "$L"
+ESMINI_LIB="$L" python -X utf8 -B -I -m pytest -q -p no:cacheprovider tests
+```
+
 - esmini 打不开含中文的绝对路径，脚本以 `scenarios/` 为工作目录、用相对路径调用（与 P5 相同）。
-- 依赖：Python 3.13、matplotlib（只用于画图）、pytest。
 
 ## 文件
 
@@ -100,7 +134,8 @@ feasib/                 计算器：requirements.py（需求推导）、sensors.
 sim/                    scenario.py（镜像场景）、esmini_backend.py、python_backend.py、controller.py、runner.py
 scenarios/              road_RHT.xodr、road_LHT.xodr 与 10 个 .xosc（5 个场景 × 2 个交通侧，脚本生成）
 scripts/                make_scenarios、run_feasibility、run_sim、make_tables、sync_report、make_plots
-tests/                  30 项 pytest（计算器 13、仿真 11、矩阵与表格 6）
+requirements.txt        pytest、matplotlib（版本钉住）
+tests/                  36 项 pytest（计算器 13、仿真 11、矩阵与表格 6、README 数字与表格重生成 6）
 results/                tables.md（全部表格）、sor_summary.csv、feasibility.csv、requirements.csv、rain_sweep.csv、
                         lc_rear_curve.csv、r79_vsmin.csv、suites.csv、sim_runs.csv、sim_mirror_check.csv、
                         sim_backend_check.csv、sim_summary.json、sim_timeseries/、esmini_logs/、fig_mirror.png

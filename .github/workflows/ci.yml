@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.11"]
+        include:
+          - os: ubuntu-latest
+            python: "3.13"
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install
+        run: python -m pip install -r requirements.txt
+      - name: Regenerate without esmini (Python-only simulation goes to results/python_only/)
+        run: |
+          python -X utf8 -B -I scripts/make_scenarios.py
+          python -X utf8 -B -I scripts/run_feasibility.py
+          python -X utf8 -B -I scripts/run_sim.py --backend python
+          python -X utf8 -B -I scripts/make_tables.py
+          python -X utf8 -B -I scripts/sync_report.py
+      - name: Tests (README numbers, tables, calculator, simulation)
+        run: python -X utf8 -B -I -m pytest -q -p no:cacheprovider tests
+      - name: Committed results and report are reproduced exactly
+        run: |
+          git status --short
+          git diff --exit-code --ignore-cr-at-eol -- results/ report.md scenarios/ data/
+          test -z "$(git status --porcelain --untracked-files=all -- results/ ':!results/python_only')"
+      - name: No local machine paths in tracked text files
+        run: |
+          if git grep -nIP '[A-Za-z]:[\x5c/](Users|Documents and Settings)[\x5c/]|/home/[a-z]|\.\.\x5cP\d+_' -- . ':!.github/workflows/ci.yml'; then
+            echo "local path found"; exit 1
+          fi

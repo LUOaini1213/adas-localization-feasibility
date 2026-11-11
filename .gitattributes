@@ -1,4 +1,3 @@
 * text=auto eol=lf
 *.png binary
-# vendored upstream code is kept byte-for-byte (tests check its SHA-256)
-vendor/** -text
+*.pdf binary

@@ -1,9 +1,9 @@
 """esmini v3.10.2 world backend through esminiLib (ctypes).
 
-Adapted from the P5 harness (P5_AEB法规场景测试/aebtest/backends.py, EsminiBackend): same library
+Adapted from the P5 harness (LUOaini1213/r152-aeb-scenario-tests, aebtest/backends.py, EsminiBackend): same library
 loading, same ParameterDeclaration callback to hand the Ego to the ExternalController, same rule of
 starting esmini from the scenarios folder with relative ASCII file names (esmini cannot open the
-non-ASCII absolute project path on this machine).  Changes for P9: several targets, the Ego is reported
+non-ASCII absolute project path).  Changes in this repo (P9): several targets, the Ego is reported
 with SE_ReportObjectPosXYH (it can move laterally), and every object state is returned.
 """
 from __future__ import annotations
