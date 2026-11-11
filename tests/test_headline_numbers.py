@@ -93,6 +93,16 @@ def test_simulation_headlines():
               "从 3.5 m/s² 升到 7.62 m/s²", "26 次运行的离散结果全部一致，自车位置最大差 0.12 m")
 
 
+def test_english_summary_states_the_same_numbers():
+    """The English summary at the top of README.md repeats numbers pinned above; keep it in step."""
+    in_readme("88-row clause-level regulation matrix (71 verified, 67 sources)",
+              "10 left-hand-traffic / right-hand-drive deltas",
+              "of 25 derived requirements the 1V1R / 5R1V / 11V5R1L suites cover 13 / 23 / 24 in clear weather",
+              "in 50 mm/h rain the 80 m corner radar drops to 68.9 m, below the 73.8 m",
+              "responds 0.98 s later (minimum gap 14.21 m → 5.77 m)",
+              "identical trajectories in all 8 RHT / LHT pairs")
+
+
 def test_tables_and_report_regenerate_exactly():
     sys.path.insert(0, str(ROOT / "scripts"))
     import make_tables

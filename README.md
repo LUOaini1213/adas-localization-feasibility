@@ -94,7 +94,7 @@ python -X utf8 -B -I scripts/run_feasibility.py
 python -X utf8 -B -I scripts/run_sim.py --backend python     # 写到 results/python_only/（不入库），不覆盖提交的 esmini 结果
 python -X utf8 -B -I scripts/make_tables.py                  # 从提交的 esmini 结果重建 results/tables.md
 python -X utf8 -B -I scripts/sync_report.py
-python -X utf8 -B -I -m pytest -q -p no:cacheprovider tests  # 34 项通过、1 项跳过（esmini 交叉检查）
+python -X utf8 -B -I -m pytest -q -p no:cacheprovider tests  # 35 项通过、1 项跳过（esmini 交叉检查）
 git diff --exit-code --ignore-cr-at-eol -- results/ report.md scenarios/
 ```
 
@@ -110,7 +110,7 @@ python -X utf8 -B -I scripts/run_sim.py --esmini-lib $L      # 26 次运行 × 2
 python -X utf8 -B -I scripts/make_tables.py                   # results/tables.md、results/sor_summary.csv
 python -X utf8 -B -I scripts/sync_report.py                   # 把 tables.md 的表同步进 report.md
 python -X utf8 -B -I scripts/make_plots.py                    # results/fig_mirror.png
-$env:ESMINI_LIB = $L; python -X utf8 -B -I -m pytest -q -p no:cacheprovider tests   # 35 项
+$env:ESMINI_LIB = $L; python -X utf8 -B -I -m pytest -q -p no:cacheprovider tests   # 36 项
 ```
 
 Linux 用发布包里的 `bin/libesminiLib.so`（本仓库提交的 esmini 结果是在 Windows 上跑的；Linux 下的 esmini 路径未实测）：
@@ -135,7 +135,7 @@ sim/                    scenario.py（镜像场景）、esmini_backend.py、pyth
 scenarios/              road_RHT.xodr、road_LHT.xodr 与 10 个 .xosc（5 个场景 × 2 个交通侧，脚本生成）
 scripts/                make_scenarios、run_feasibility、run_sim、make_tables、sync_report、make_plots
 requirements.txt        pytest、matplotlib（版本钉住）
-tests/                  35 项 pytest（计算器 13、仿真 11、矩阵与表格 6、README 数字与表格重生成 5）
+tests/                  36 项 pytest（计算器 13、仿真 11、矩阵与表格 6、README 数字与表格重生成 6）
 results/                tables.md（全部表格）、sor_summary.csv、feasibility.csv、requirements.csv、rain_sweep.csv、
                         lc_rear_curve.csv、r79_vsmin.csv、suites.csv、sim_runs.csv、sim_mirror_check.csv、
                         sim_backend_check.csv、sim_summary.json、sim_timeseries/、esmini_logs/、fig_mirror.png
